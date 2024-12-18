@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generator</title>
+
+    </head>
+
+    <style>
+
+        header {
+            background-color: #d79f5a;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif, 'Calibri', 'Trebuchet MS';
+            text-align: center;
+            background: linear-gradient(135deg, #e1b979, #13b7c3);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .choosing{
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(145, 208, 201);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        select, button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color:palevioletred;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #13657b;
+        }
+
+        .prompt {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial,
+        } 
+
+        a{
+            z-index: 1;
+            position: relative;
+            float: right;
+            color: rgb(254, 244, 233);
+            margin: 10px;
+        }
+
+    
+    
+
+
+    </style>
+
+    <body>
+
+        <div>
+            <a href="index.html">Main Page</a> 
+        </div>
+
+        <header>
+            <h1>Prompt Generator:</h1>
+            <p>Select a theme to get inspired and have some fun! 📷 🎞️</p>
+        </header>
+        
+        <div class="choosing">
+            <label for="mood">Choose a mood or theme:</label>
+            <select id="mood">
+                <option value="joy">Joy</option>
+                <option value="vintage">Vintage</option>
+                <option value="nostalgic">Nostalgic</option>
+                <option value="elegant">Elegant</option>
+                <option value="romantic">Romantic</option>
+            </select>
+
+            <button onclick="generatePrompt()">Generate Prompt</button>
+
+            <div class="prompt" id="prompt"></div>
+        </div>
+
+            <script>
+                const prompts = {
+                    joy: [
+                        "Photograph an engagement.",
+                        "Write about a moment that made you smile today.",
+                        "Draw some doodles in your journal."
+                    ],
+                    vintage: [
+                        "Capture an old typewriter on a wooden desk.",
+                        "Watch a 1920's series or movie.",
+                        "Take pictures in black and white."
+                    ],
+                    nostalgic: [
+                        "Photograph in an old childhood place.",
+                        "Write about a memory tied to your favorite song.",
+                        "Create art inspired by a place you loved growing up."
+                    ],
+                    elegant: [
+                        "Take pictures of a couple in a museum",
+                        "Write a poem about the beauty of simplicity.",
+                        "Photograph a ballerina in motion."
+                    ],
+                    romantic: [
+                        "Photograph a couple holding hands in a city.",
+                        "Read a romance book.",
+                        "Sketch a moonlit dinner by candlelight."
+                    ]
+                };
+        
+                function generatePrompt() {
+                    const mood = document.getElementById("mood").value;
+                    const randomIndex = Math.floor(Math.random() * prompts[mood].length);
+                    const prompt = prompts[mood][randomIndex];
+                    document.getElementById("prompt").textContent = prompt;
+                }
+            </script>
+
+    </body>
+
+</html> 

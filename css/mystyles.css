@@ -1,0 +1,60 @@
+body{
+    font-family: 'Arial', 'Times New Roman', Times, serif;
+    color: rgb(75, 56, 43);
+    background-color: rgb(240, 241, 224);
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(220, 179, 125, 0.892);
+    font-size: 500%;
+    text-align: left;
+    border-bottom: 3px dotted rgb(75, 56, 43);
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}   
+
+
+p{
+    font-size: 15;
+
+}
+
+img{
+    float: left;
+    margin-right: 20px; 
+    width: 150px;
+    display: block;
+   
+}
+
+li:hover{
+    text-decoration: underline;
+    background-color: rgb(159, 138, 109);
+}
+
+a:visited{
+    color: rgb(190, 72, 26);
+}
+
+a{
+    color: rgb(223, 140, 24);
+
+}
+
+a:hover{
+    text-decoration: overline;
+}
+
+
+.nav{
+    z-index: 1;
+    position: relative;
+    float: right;
+}
+
+
+h3{
+    margin-top: 90px;
+}
+  
